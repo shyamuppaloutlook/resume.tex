@@ -1,62 +1,214 @@
+Open in Overleaf
+Download LaTeX
+Copy
+\documentclass[letterpaper,11pt]{article}
 
-  \documentclass[letterpaper,11pt]{article}
-  \usepackage[empty]{fullpage}
-  \usepackage{titlesec}
-  \usepackage[usenames,dvipsnames]{color}
-  \usepackage{enumitem}
-  \usepackage[hidelinks]{hyperref}
-  \usepackage[english]{babel}
-  \usepackage{tabularx}
-  \addtolength{\oddsidemargin}{-0.5in}
-  \addtolength{\evensidemargin}{-0.5in}
-  \addtolength{\textwidth}{1in}
-  \addtolength{\topmargin}{-.5in}
-  \addtolength{\textheight}{1.0in}
-  \urlstyle{same}
-  \raggedbottom
-  \raggedright
-  \setlength{\tabcolsep}{0in}
-  \titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\large
-  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-  \newcommand{\resumeItem}[1]{
-    \item\small{
-      {#1 \vspace{-2pt}}
-    }
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
   }
-  \newcommand{\resumeSubheading}[5]{
-    \vspace{-2pt}\item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2 \\
-        \textit{\small#3} & \textit{\small #4} \\
-      \end{tabular*}
-      {#5}\\}
-  \newcommand{\resumeSubheadingBis}[4]{
-    \vspace{-2pt}\item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2 \\
-        \textit{\small#3} & \textit{\small #4} \\
-      \end{tabular*}\vspace{-7pt}}
-  \newcommand{\resumeSubSubheading}[2]{
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textit{\small#1} & \textit{\small #2} \
-      \end{tabular*}\vspace{-7pt}}
-  \newcommand{\resumeProjectHeading}[2]{
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \small#1 & #2 \
-      \end{tabular*}\vspace{-7pt}}
-  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-  \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-  \newcommand{\resumeSkillsListStart}{\begin{itemize}[leftmargin=0.15in, label={}, noitemsep, topsep=0pt, partopsep=0pt]}
-  \newcommand{\resumeSkillsListEnd}{\end{itemize}}  
-  \newcommand{\resumeItemListStart}{\begin{itemize}}
-  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-  \begin{document}
-  
-  \begin{center}
-  \textbf{\Huge \scshape EmptyEntry EmptyEntry} \\ \vspace{1pt}\end{center}
-    \end{document}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Matty Doe} \\ \vspace{1pt}
+    \small \href{mailto:mattydoe@gmail.com}{\underline{mattydoe@gmail.com}} $|$
+    \href{https://linkedin.com/in/mattydoe}{\underline{linkedin.com/in/mattydoe}} $|$
+    \href{https://github.com/mattyDoe}{\underline{github.com/mattyDoe}} $|$
+    \href{https://mattydoe.com}{\underline{mattydoe.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College University}{ }
+      {B.S. Computer Science}{June 2026}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.0/4.0}
+        \resumeItem{Relevant Coursework: Object-Oriented Programming, Data Structures \& Algorithms, Embedded Systems, Discrete Math, Linear Algebra, Calculus, Physics, Probability \& Statistics}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Little High School (Dual Enrollment at Mission Community College)}{ }
+      {}{June 2022}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.44/4.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Competitive Programming Club}{ }
+      {Member}{Sept. 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Involved in the club centered around Competitive Programming}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Apex Tutoring}{ }
+      {Tutor}{2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{Routinely tutor K--12 students in math, coding, etc.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Luigi Team Charity}{ }
+      {Volunteer, Manager}{2018 -- Present}
+      \resumeItemListStart
+        \resumeItem{Earned an award for philanthropic hours spent, still giving away 100 stocked backpacks a year}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Carbon} $|$ \emph{Flutter, Dart, Supabase, APIs (INRIX, Google Maps), Git, Unix Shell, VS Code}}{Nov. 2023}
+          \resumeItemListStart
+            \resumeItem{Team project for the INRIX Hack 2023 Hackathon, earned Honorable Mention}
+            \resumeItem{Developed a social media mobile app to gamify eco-friendliness using the INRIX API}
+            \resumeItem{Learned how to use Flutter in conjunction with backend databases and APIs}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ChatBuzz} $|$ \emph{TypeScript, HTML/CSS, Webpack, API (Twitch), Git, Unix Shell, VS Code}}{May 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application for Twitch livestreamers to display repeated chat messages on OBS}
+            \resumeItem{Experimented with Twitch API’s OAuth Access Tokens to get chat data from the given channel}
+            \resumeItem{Collaborated with livestreamers to get feedback and suggested features}
+            \resumeItem{Solved problems relating to asynchronous tasks}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{FoodDropper} $|$ \emph{Java, Maven, API (Spigot), Git, IntelliJ IDEA}}{Aug. 2022}
+          \resumeItemListStart
+            \resumeItem{Developed a Minecraft server plugin to limit players to one way of replenishing their hunger bar}
+            \resumeItem{Used persistent data containers to save and load data, ensuring that it persists across plugin resets}
+            \resumeItem{Optimized UX e.g. sound design, food drop timing, supplied saturation level, and addressed potential workarounds}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, Python, Java, JavaScript/TypeScript, HTML/CSS, LT\textasciicircum X\textasciicircum E} \\
+     \textbf{Frameworks}{: Flutter, Dart, Supabase, Maven, Spigot} \\
+     \textbf{Developer Tools}{: Git/GitHub, Unix Shell, Webpack, VS Code, IntelliJ CLion/PyCharm/IDEA, Atom} \\
+     }}
+ \end{itemize}
+
+\section{Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Dean’s Honor List}{: (3x)} \\
+     \textbf{AP Scholar with Distinction}{: (2x)} \\
+     \textbf{World Language History Award (Spanish)}{ } \\
+     \textbf{3rd Place Time Keeping Challenge Championship}{: Feb. 2022 -- May 2022, Time Keeping Association, Won \$1500 nationally competing against high school students in counting seconds and minutes}
+    }}
+ \end{itemize}
+
+\section{Other}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {}{ }
+      {Hobbies}{2013 -- 2019}
+      \resumeItemListStart
+        \resumeItem{Playing the Drums in symphonic, jazz, and marching bands}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
